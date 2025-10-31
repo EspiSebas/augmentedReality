@@ -6,7 +6,7 @@
   <title>Demo AR.js</title>
 
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
 
   <style>
@@ -27,22 +27,16 @@
         <a-asset-item id="modelo" src="modelos/luminaNaturaleza.glb"></a-asset-item>
     </a-assets>
 
-      
-      <a-nft
-        type="nft"
-        url="markers/Hiro_marker_ARjs.fset" 
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance="0.01"
-        smoothThreshold="5"
-      >
+
+
+     <a-marker preset="hiro">
         <a-entity
           gltf-model="#modelo"
           scale="0.5 0.5 0.5"
           position="0 0 0"
           rotation="0 180 0"
         ></a-entity>
-      </a-nft>
+    </a-marker>
 
     <a-entity camera position="0 0 0"></a-entity>
   </a-scene>
