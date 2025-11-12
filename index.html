@@ -26,16 +26,33 @@
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
     <a-assets>
-      <a-asset-item id="modelo" src="modelos/aire.glb"></a-asset-item>
+      <a-asset-item id="aire" src="modelos/aire.glb"></a-asset-item>
     </a-assets>
 
+    <a-assets>
+      <a-asset-item id="aura" src="modelos/aura.glb"></a-asset-item>
+    </a-assets>
+
+    <a-assets>
+      <a-asset-item id="lumira" src="modelos/lumira.glb"></a-asset-item>
+    </a-assets>
+
+    <a-assets>
+      <a-asset-item id="Naturaleza" src="modelos/Naturaleza.glb"></a-asset-item>
+    </a-assets>
 
     <a-entity light="type: ambient; color: #ffffff; intensity: 1.2"></a-entity>
     <a-entity light="type: directional; color: #ffffff; intensity: 4" position="2 4 2"></a-entity>
     <a-entity environment="preset: default; lighting: none; ground: none"></a-entity>
 
-    <a-marker type="pattern" url="markers/pattern-tree-v2.patt">
-      <a-entity material="shader: standard;" shadow="cast: true; receive: true" gltf-model="#modelo" scale="0.5 0.5 0.5"
+    <a-marker type="pattern" url="markers/nature.patt">
+      <a-entity material="shader: standard;" shadow="cast: true; receive: true" gltf-model="#Naturaleza" scale="0.5 0.5 0.5"
+        position="0 0 0" rotation="-90 0 0">
+      </a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" url="markers/sunlight.patt">
+      <a-entity material="shader: standard;" shadow="cast: true; receive: true" gltf-model="#lumira" scale="0.5 0.5 0.5"
         position="0 0 0" rotation="-90 0 0">
       </a-entity>
     </a-marker>
