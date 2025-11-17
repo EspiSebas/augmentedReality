@@ -25,22 +25,33 @@
       <a-asset-item id="aura" src="modelos/aura.glb"></a-asset-item>
       <a-asset-item id="lumira" src="modelos/lumira.glb"></a-asset-item>
       <a-asset-item id="naturaleza" src="modelos/Naturaleza.glb"></a-asset-item>
+      <a-asset-item id="luz" src="modelos/Luz.glb"></a-asset-item>
     </a-assets>
 
     
     <a-entity light="type: ambient; color: #ffffff; intensity: 1.2"></a-entity>
     <a-entity light="type: directional; color: #ffffff; intensity: 4" position="2 4 2"></a-entity>
 
-    <a-marker type="pattern" url="markers/nature.patt" emitevents="true">
+    <a-marker type="pattern" url="markers/naturalez.patt" emitevents="true">
       <a-entity gltf-model="#naturaleza" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
     </a-marker>
 
     
-    <a-marker type="pattern" url="markers/sunlight.patt" emitevents="true">
-      <a-entity gltf-model="#lumira" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
+    <a-marker type="pattern" url="markers/aire.patt" emitevents="true">
+      <a-entity gltf-model="#aire" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
     </a-marker>
 
+    <a-marker type="pattern" url="markers/aura.patt" emitevents="true">
+      <a-entity gltf-model="#aura" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
+    </a-marker>
     
+    <a-marker type="pattern" url="markers/lumiria.patt" emitevents="true">
+      <a-entity gltf-model="#lumira" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
+    </a-marker>
+    <a-marker type="pattern" url="markers/luz.patt" emitevents="true">
+      <a-entity gltf-model="#luz" scale="0.5 0.5 0.5" position="0 0 0" rotation="90 180 0"></a-entity>
+    </a-marker>
+
     <a-entity camera></a-entity>
 
   </a-scene>
