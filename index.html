@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <title>Demo AR.js</title>
@@ -8,16 +7,11 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
-
-
-
   <style>
-    body,
-    html {
+    body, html {
       margin: 0;
       padding: 0;
       overflow: hidden;
-
     }
   </style>
 </head>
@@ -25,37 +19,30 @@
 <body>
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
+    
     <a-assets>
       <a-asset-item id="aire" src="modelos/aire.glb"></a-asset-item>
-    </a-assets>
-    <a-assets>
       <a-asset-item id="aura" src="modelos/aura.glb"></a-asset-item>
-    </a-assets>
-    <a-assets>
       <a-asset-item id="lumira" src="modelos/lumira.glb"></a-asset-item>
-    </a-assets>
-    <a-assets>
-      <a-asset-item id="Naturaleza" src="modelos/Naturaleza.glb"></a-asset-item>
+      <a-asset-item id="naturaleza" src="modelos/Naturaleza.glb"></a-asset-item>
     </a-assets>
 
+    
     <a-entity light="type: ambient; color: #ffffff; intensity: 1.2"></a-entity>
     <a-entity light="type: directional; color: #ffffff; intensity: 4" position="2 4 2"></a-entity>
-    <a-entity environment="preset: default; lighting: none; ground: none"></a-entity>
 
-    <a-marker type="pattern" url="markers/nature.patt">
-      <a-entity material="shader: standard;" shadow="cast: true; receive: true" gltf-model="#Naturaleza" scale="0.5 0.5 0.5"
-        position="0 0 0" rotation="-90 0 0">
-      </a-entity>
+    <a-marker type="pattern" url="markers/nature.patt" emitevents="true">
+      <a-entity gltf-model="#naturaleza" scale="0.5 0.5 0.5" position="0 0 0" rotation="-90 0 0"></a-entity>
     </a-marker>
 
-    <a-marker type="pattern" url="markers/sunlight.patt">
-      <a-entity material="shader: standard;" shadow="cast: true; receive: true" gltf-model="#lumira" scale="0.5 0.5 0.5"
-        position="0 0 0" rotation="-90 0 0">
-      </a-entity>
+    
+    <a-marker type="pattern" url="markers/sunlight.patt" emitevents="true">
+      <a-entity gltf-model="#lumira" scale="0.5 0.5 0.5" position="0 0 0" rotation="-90 0 0"></a-entity>
     </a-marker>
 
-    <a-entity camera position="0 0 0"></a-entity>
+    
+    <a-entity camera></a-entity>
+
   </a-scene>
 </body>
-
 </html>
